@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.wonsunahn</groupId>
-  <artifactId>cs1632-cicd-pipelines-ejw76</artifactId>
+  <artifactId>cs1632-cicd-pipelines-cim18</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
@@ -31,7 +31,7 @@
     <connection>scm:git:git://github.com/wonsunahn/CS1632_CICD_JUnit.git</connection>
     <developerConnection>scm:git:ssh://github.com:wonsunahn/CS1632_CICD_JUnit.git</developerConnection>
     <url>http://github.com/wonsunahn/CS1632_CICD_JUnit/tree/master</url>
-  </scm>
+   </scm>
 
   <distributionManagement>
     <repository>
@@ -42,24 +42,25 @@
   </distributionManagement>
 
   <properties>
-    <sonar.organization>cs1632</sonar.organization>
-    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    <java.version>8</java.version>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <java.version>17</java.version>
+    <maven.compiler.source>17</maven.compiler.source>
+	 <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
     <maven-javadoc-plugin.version>3.6.2</maven-javadoc-plugin.version>
+    <sonar.organization>cs1632</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
   <dependencies>
 
+  
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
       <version>5.7.0</version>
       <scope>test</scope>
-    </dependency>
+	 </dependency>
 
 
     <dependency>
@@ -73,6 +74,13 @@
 
   <build>
     <plugins>
+      <plugin>    
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+              <source>17</source>
+              <target>17</target>
+          </configuration>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
